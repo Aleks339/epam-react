@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>European capitals</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <div class="root"></div>
+    
+    <script type = "text/babel"> 
+
+    import React from 'react';
+    import ReactDOM from 'react-dom';
+
+    const capitals = <div>
+            <div>
+                <div>Germany</div>
+                <div>France</div>
+                <div>UK</div>
+                <div>Netherlands</div>
+                <div>Italy</div>
+                <div>Spain</div>
+            </div>    
+            <div>
+                <div>Berlin</div>
+                <div>Paris</div>
+                <div>London</div>
+                <div>Amsterdam</div>
+                <div>Rome</div>
+                <div>Madrid</div>
+            </div> 
+          </div>
+
+      ReactDOM.render(
+          capitals,
+          document.getElementById("root");
+    )
+    </script>
+</body>
+</html>
