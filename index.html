@@ -8,10 +8,12 @@
 <body>
     <div class="root"></div>
     
+    <script src="js/react.js"></script>
+    <script src="js/react-dom.js"></script>
+    <script src="js/browser.js"></script>
+    <script src="node_modules/babel-standalone/babel.min.js"></script>
+    
     <script type = "text/babel"> 
-
-    import React from 'react';
-    import ReactDOM from 'react-dom';
 
     const capitals = <div>
             <div>
@@ -34,7 +36,7 @@
 
       ReactDOM.render(
           capitals,
-          document.getElementById("root");
+          document.getElementById("root")
     )
     </script>
 </body>
