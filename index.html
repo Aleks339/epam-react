@@ -41,23 +41,34 @@
     const Capitals  = () => (
         <div style = {quiz}>
             <div style = {quiz_countries}>
-                <div style = {quiz_countries__country}>Germany</div>
-                <div style = {quiz_countries__country}>France</div>
-                <div style = {quiz_countries__country}>UK</div>
-                <div style = {quiz_countries__country}>Netherlands</div>
-                <div style = {quiz_countries__country}>Italy</div>
-                <div style = {quiz_countries__country}>Spain</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>Germany</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>France</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>UK</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>Netherlands</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>Italy</div>
+                <div style = {quiz_countries__country} onClick={onCountryClick}>Spain</div>
             </div>    
             <div style = {quiz_capitals}>
-                <div style = {quiz_capitals__capital}>Berlin</div>
-                <div style = {quiz_capitals__capital}>Paris</div>
-                <div style = {quiz_capitals__capital}>London</div>
-                <div style = {quiz_capitals__capital}>Amsterdam</div>
-                <div style = {quiz_capitals__capital}>Rome</div>
-                <div style = {quiz_capitals__capital}>Madrid</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>Berlin</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>Paris</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>London</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>Amsterdam</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>Rome</div>
+                <div style = {quiz_capitals__capital} onClick={onCapitalClick}>Madrid</div>
             </div> 
           </div>
-    );
+        );
+
+        function onCapitalClick (event) {
+
+            event.currentTarget.style.backgroundColor = '#ccc';
+
+        };
+        function onCountryClick (event) {
+
+            event.currentTarget.style.backgroundColor = '#fc1';
+
+        };
 
       ReactDOM.render(
           <Capitals/>,
