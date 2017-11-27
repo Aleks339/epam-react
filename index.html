@@ -3,39 +3,64 @@
 <head>
     <meta charset="UTF-8">
     <title>European capitals</title>
-    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-    <div class="root"></div>
+    <div id="root"></div>
     
     <script src="js/react.js"></script>
     <script src="js/react-dom.js"></script>
     <script src="js/browser.js"></script>
     <script src="node_modules/babel-standalone/babel.min.js"></script>
     
-    <script type = "text/babel"> 
+    <script type = "text/babel">
 
-    const capitals = <div>
-            <div>
-                <div>Germany</div>
-                <div>France</div>
-                <div>UK</div>
-                <div>Netherlands</div>
-                <div>Italy</div>
-                <div>Spain</div>
+    const quiz = {
+        display: 'flex',
+        flexDirection: 'row',
+        fontSize: '60px',
+        justifyContent: 'space-around',
+        cursor: 'pointer'
+    };
+    const quiz_capitals = {
+        color: 'green'
+    };
+    const quiz_countries = {
+        color: 'blue',
+    };
+    const quiz_capitals__capital = {
+        padding: '15px',
+        margin: '2px',
+        border:'1px solid blue',
+    }
+    const quiz_countries__country = {
+        padding: '15px',
+        margin: '2px',
+        border:'1px solid green'
+    }
+
+    const Capitals  = () => (
+        <div style = {quiz}>
+            <div style = {quiz_countries}>
+                <div style = {quiz_countries__country}>Germany</div>
+                <div style = {quiz_countries__country}>France</div>
+                <div style = {quiz_countries__country}>UK</div>
+                <div style = {quiz_countries__country}>Netherlands</div>
+                <div style = {quiz_countries__country}>Italy</div>
+                <div style = {quiz_countries__country}>Spain</div>
             </div>    
-            <div>
-                <div>Berlin</div>
-                <div>Paris</div>
-                <div>London</div>
-                <div>Amsterdam</div>
-                <div>Rome</div>
-                <div>Madrid</div>
+            <div style = {quiz_capitals}>
+                <div style = {quiz_capitals__capital}>Berlin</div>
+                <div style = {quiz_capitals__capital}>Paris</div>
+                <div style = {quiz_capitals__capital}>London</div>
+                <div style = {quiz_capitals__capital}>Amsterdam</div>
+                <div style = {quiz_capitals__capital}>Rome</div>
+                <div style = {quiz_capitals__capital}>Madrid</div>
             </div> 
           </div>
+    );
 
       ReactDOM.render(
-          capitals,
+          <Capitals/>,
           document.getElementById("root")
     )
     </script>
